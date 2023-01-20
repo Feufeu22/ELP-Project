@@ -1,10 +1,14 @@
 /*-----------------------------------------------*/
-/*				 ** PROJET GO ** 		   		 */
+/*               ** PROJET GO **                 */
 /*-----------------------------------------------*/
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 /*-----------------------------------------------*/
 // ** STRUCTURES  ** //
@@ -56,7 +60,6 @@ func Multiply(matrix1 Matrix, matrix2 Matrix) (Matrix, error) {
 
 }
 
-/*-----------------------------------------------*/
 // La fonction WORKER (effectue des multiplication en parallèle avec des goroutines)
 func worker(id int, jobs <-chan Matrix, results chan<- MatrixResult) {
 	for j := range jobs {
@@ -71,13 +74,26 @@ func worker(id int, jobs <-chan Matrix, results chan<- MatrixResult) {
 	}
 }
 
-/*-----------------------------------------------*/
+// Fonction qui génère une matrice carré d'ordre n aléatoire
+func RandomMatrix(rows, columns int) Matrix {
+	rand.Seed(time.Now().UnixNano())
+	data := make([][]int, rows)
+	for i := range data {
+		data[i] = make([]int, columns)
+		for j := range data[i] {
+			data[i][j] = rand.Intn(10)
+		}
+	}
+	time.Sleep(100 * time.Millisecond)
+	return Matrix{Rows: rows, Columns: columns, Data: data}
+}
+
 // Fonction qui retourne les matrices à multiplier
 func getMatrix1() Matrix {
-	return Matrix{Rows: 2, Columns: 2, Data: [][]int{{1, 2}, {3, 4}}}
+	return RandomMatrix(3, 3)
 }
 func getMatrix2() Matrix {
-	return Matrix{Rows: 2, Columns: 2, Data: [][]int{{3, 1}, {-1, 2}}}
+	return Matrix{Rows: 3, Columns: 3, Data: [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}}
 }
 
 /*-----------------------------------------------*/
@@ -90,13 +106,13 @@ func main() {
 	results := make(chan MatrixResult)
 
 	// Création des workers
-	numWorkers := 4
+	numWorkers := 10
 	for w := 1; w <= numWorkers; w++ {
 		go worker(w, jobs, results)
 	}
 
 	// Envoyer les matrices au channel jobs
-	numTasks := 1
+	numTasks := 10
 	for i := 0; i < numTasks; i++ {
 		matrix1 := getMatrix1()
 		matrix2 := getMatrix2()
@@ -112,5 +128,4 @@ func main() {
 			fmt.Println(res.result)
 		}
 	}
-
 }

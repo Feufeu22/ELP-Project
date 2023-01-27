@@ -1,8 +1,3 @@
-# PROJET ELP
-
-* **Objectif** : se familiariser avec certains de ces concepts en utilisant différents langages de programmation
-* Le projet est constitué de trois parties indépendantes ( *ELM, GO , JS* )
-
 ## GO
 * J'ai un programme qui calcul un produit de matrice, avec des **goroutines** pour obtenir une exécution plus légère.
 * Tous le code est dans le fichier **prodMatrices.go**.
@@ -17,13 +12,5 @@
 * Je peux modifier le nombre de channel jobs ainsi que le nombre de worker, par exemple avec chacun de ces paramètre à **10**, j'ai le résultat suivant losque j'exécute mon programme : 
 
 ![Alt text](https://raw.githubusercontent.com/tfeutren/ELP-Project/master/terminal.png)
-
-## JS
-
-* Todo
-
-## ELM
-
-* Todo
 
 

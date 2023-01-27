@@ -11,6 +11,6 @@
   * Envoie des matrices au channel jobs
 * Je peux modifier le nombre de channel jobs ainsi que le nombre de worker, par exemple avec chacun de ces paramètre à **10**, j'ai le résultat suivant losque j'exécute mon programme : 
 
-![Alt text](https://raw.githubusercontent.com/tfeutren/ELP-Project/master/terminal.png)
+![Alt text](https://raw.githubusercontent.com/tfeutren/ELP-Project/master/GO/terminal.png)
 
 

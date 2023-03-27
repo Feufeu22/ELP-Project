@@ -1,0 +1,23 @@
+{
+  "type": "commonjs",
+  "name": "translator-cli",
+  "version": "1.0.0",
+  "description": "Create CLI with JavaScript",
+  "main": "bin/app.js",
+  "scripts": {
+    "test": "\"echo \\\"Error : No test specified \"\\ && exit 1\""
+  },
+  "keywords": [
+    "thomas"
+  ],
+  "author": "Feutren Thomas",
+  "license": "ISC",
+  "bin": {
+    "translator-cli": "./bin/app.js"
+  },
+  "dependencies": {
+    "@vitalets/google-translate-api": "^9.1.0",
+    "commander": "^10.0.0",
+    "figlet": "^1.5.2"
+  }
+}

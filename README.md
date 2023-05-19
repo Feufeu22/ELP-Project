@@ -19,3 +19,26 @@ elm reactor
 * Se diriger vers le fichier `Main.elm` dans le dossier src.
 * Enjoy !
 
+## GO
+
+* ...
+
+## JS
+
+* CLI en javascript
+* accèder au fichier : /JS/bashJS/bin/bash.js
+* Commande à exécuter :
+```bash
+bash bash.js
+```
+* Les commandes accepter pour le CLI : 
+** exit
+** clear
+** help
+** ls
+** cd 
+** touch
+** mkdir
+** rm
+
+

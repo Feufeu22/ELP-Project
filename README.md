@@ -32,13 +32,13 @@ elm reactor
 bash bash.js
 ```
 * Les commandes accepter pour le CLI : 
-** exit
-** clear
-** help
-** ls
-** cd 
-** touch
-** mkdir
-** rm
+  * exit
+  * clear
+  * help
+  * ls
+  * cd 
+  * touch
+  * mkdir
+  * rm
 
 

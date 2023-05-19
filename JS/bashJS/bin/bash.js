@@ -1,5 +1,6 @@
 // ** FEUTREN CLI ** //
 
+// -------------------------------------------------------------
 // Initialisation des constantes
 const readline = require('readline');
 const figlet = require("figlet");
@@ -33,6 +34,7 @@ command.on('close', (code) => {
 
 // -------------------------------------------------------------
 // Afficher le texte stylisé
+
 figlet('FEUTREN    CLI', function (err, data) {
     console.log(data);
     console.log("----------------------------------------");
@@ -79,6 +81,16 @@ rl.on('line', (input) => {
         .version('0.1.0');
     program.command('clear')
         .description('Efface les lignes du terminal')
+    program.command('ls')
+        .description('Afficher les fichiers et dossiers')
+    program.command('cd')
+        .description('Changer de dossier')
+    program.command('touch')
+        .description('Créer un fichier')
+    program.command('mkdir')
+        .description('Créer un dossier')
+    program.command('rm')
+        .description('Supprimer un fichier ou un dossier')
     program.parse(process.argv);
   } 
 

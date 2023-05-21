@@ -21,7 +21,19 @@ elm reactor
 
 ## GO
 
-* ...
+* Implantation d'une interaction client-serveur pour le calcul de matrice
+* ``` server.go ``` pour le serveur et ``` client.go ``` pour le client
+* Côté serveur :
+```bash
+go run server.go <port>
+```
+* Côté client :
+```bash
+go run client.go <port> <input>
+```
+* La sortie est écrite dans ``` output.txt ```
+* Utilisation d'une goroutine qui effectue des tâches en continu en récupérant des travaux à partir d'un canal
+* Calculs matriciels distribués en utilisant des workers et traite les demandes provenant des client.
 
 ## JS
 

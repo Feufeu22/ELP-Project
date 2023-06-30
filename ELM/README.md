@@ -14,8 +14,10 @@ Game where you have to find a word from a definition
 
 # Run the project
 
-Go to ```ELM/src``` and run ```elm reactor```
+* Go to ```ELM/src``` and run ```elm reactor```
+* Go to http://localhost:8000
+* Open Projet.elm
 
-be careful you must first check to have the dependencies provided in ```elm.json``.
-To solve this run ```npm install elm.json```
+Be careful you must first check to have the dependencies provided in ```elm.json```.
+To solve this run ``` npm install elm.json```
 
